@@ -1,0 +1,409 @@
+        body,
+        html {
+            height: 100%;
+            margin: 0;
+            font-family: "Noto Sans JP", sans-serif;
+            color: gray;
+        }
+
+        /* for hero background image */
+        .hero-image {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("main\ image\ web-01-01.jpg");
+            position: relative;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+        }
+
+        .logo {
+            position: absolute;
+            top: 2%;
+            left: 7%;
+            width: 270px;
+            height: 80px;
+        }
+
+        header div a {
+            font-size: larger;
+            text-decoration: none;
+            margin: 20px;
+            /* background-color: rgb(226, 43, 43); */
+            color: blue;
+            padding: 7px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+
+        header a:hover,
+        .overlay a:hover {
+            color: red;
+            /* text-decoration: underline; */
+        }
+
+        header a::after,
+        .overlay a::after {
+            content: '';
+            position: absolute;
+            height: 2px;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            background: blue;
+            transition: width .2s;
+        }
+
+        a:hover:after,
+        .overlay a:hover:after {
+            width: 100%;
+        }
+
+        .top-nav-links {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+        }
+
+        .hero-text {
+            text-align: left;
+            position: absolute;
+            top: 30%;
+            left: 8%;
+            width: 80%;
+        }
+
+        .hero-text h1 {
+            font-size: 6rem;
+            width: 1000px;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            color: white;
+            margin: 40px 0 20px 0;
+        }
+
+        .hero-text p {
+            width: 950px;
+            font-size: 2rem;
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            color: wheat;
+        }
+
+        .hero-text button {
+            border: none;
+            border-radius: 15px;
+            text-align: center;
+            padding: 10px 25px;
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+            background-color: darkcyan;
+            cursor: pointer;
+        }
+
+        .hero-text button:hover {
+            background-color: lightseagreen;
+            transition: .2s ease;
+        }
+
+        .hero-text p span {
+            color: gold;
+        }
+
+        .main-body {
+            width: 80%;
+            margin: auto;
+        }
+
+        .main-content {
+            position: relative;
+        }
+
+        .main-1-content {
+            position: absolute;
+            top: 10px;
+            left: 0;
+            width: 780px;
+        }
+
+        .main-2-content {
+            position: absolute;
+            top: 550px;
+            right: 0;
+            width: 780px;
+        }
+
+        .main-1-content h2,
+        #img-gallery h2 {
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 650;
+            font-size: 50px;
+            color: #04657d;
+        }
+
+        .main-1-content p {
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.6;
+            color: gray;
+        }
+
+        .main-2-content h2 {
+            font-family: "Montserrat", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 650;
+            font-size: 50px;
+            color: #04657d;
+        }
+
+        .main-2-content p {
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 1.6;
+            color: gray;
+        }
+
+        #img-body-1 {
+            position: absolute;
+            top: 85px;
+            right: 0;
+            width: 450px;
+            height: 450px;
+        }
+
+        #img-body-2 {
+            position: absolute;
+            top: 630px;
+            left: 0;
+            width: 450px;
+            height: 450px;
+        }
+
+        #img-gallery {
+            position: relative;
+            top: 1150px;
+            width: 80%;
+            margin: auto;
+        }
+
+        div.gallery {
+            margin: 8px;
+            border: 0.7px solid gold;
+            float: left;
+            width: 610px;
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.description {
+            padding: 15px;
+            text-align: center;
+            font-size: larger;
+        }
+
+        .gallery em {
+            color: red;
+        }
+
+        .gallery span {
+            margin: 0px 30px;
+        }
+
+        #img-gallery h2 {
+            text-align: center;
+        }
+
+        /* New CSS for slide-on-hover effect */
+        /* New CSS for slide-up effect on hover */
+        div.gallery {
+            position: relative;
+            margin: 8px;
+            border: 0.7px solid gold;
+            float: left;
+            width: 610px;
+            padding: 1px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            /* Add slight shadow */
+            transition: box-shadow 0.3s ease;
+            /* Smooth shadow transition */
+        }
+
+        div.gallery:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.7);
+            /* Increase shadow on hover */
+        }
+
+        div.gallery img {
+            width: 100%;
+            height: auto;
+        }
+
+        div.gallery>.overlay {
+            position: absolute;
+            bottom: -100%;
+            /* Initially hidden below the image */
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            /* Dark overlay */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.5s ease;
+            /* Smooth slide transition */
+        }
+
+        div.gallery:hover .overlay {
+            bottom: 0;
+            /* Slide up to cover the image */
+        }
+
+        .overlay a {
+            text-decoration: none;
+            color: darkcyan;
+            position: relative;
+        }
+
+        .footer-img {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("footer.jpg");
+            position: relative;
+            top: 3100px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            height: 90%;
+            opacity: 0.9;
+        }
+
+        footer {
+            height: 100%;
+            margin-top: 20px;
+        }
+
+        /* column 1 */
+        .col-1 {
+            position: absolute;
+            top: 190px;
+            left: 110px;
+        }
+
+        .col-1 p {
+            color: gold;
+            font-size: 1rem;
+        }
+
+        /* column 2 */
+        .col-2 {
+            position: absolute;
+            top: 70px;
+            left: 580px;
+        }
+
+        .col-2 p {
+            color: gold;
+            font-size: 1.3rem;
+            line-height: 5vh;
+        }
+
+        .col-2 h1 {
+            color: wheat;
+            font-size: 3rem;
+        }
+
+        /* column 3 */
+        .col-3 {
+            position: absolute;
+            top: 70px;
+            left: 1210px;
+        }
+
+        .col-3 p {
+            color: gold;
+            font-size: 1.3rem;
+            line-height: 5vh;
+        }
+
+        .col-3 h1 {
+            color: wheat;
+            font-size: 3rem;
+        }
+
+        /* Responsive Styles for larger screens */
+        @media only screen and (min-width: 2560px) {
+
+            /* Adjust the hero text size and alignment */
+            /* column 1 */
+            #foot-img {
+                position: absolute;
+                top: 0.4%;
+                left: 1%;
+                width: 500px;
+                height: 200px;
+            }
+
+            .col-1 {
+                position: absolute;
+                top: 290px;
+                left: 80px;
+                width: 15vh;
+            }
+
+            .col-1 p {
+                color: gold;
+                font-size: 3rem;
+                /* width: 10vh; */
+            }
+
+            /* column 2 */
+            .col-2 {
+                position: absolute;
+                top: 70px;
+                left: 620px;
+            }
+
+            .col-2 p {
+                color: gold;
+                font-size: 2.3rem;
+                line-height: 3.3vh;
+            }
+
+            .col-2 h1 {
+                color: wheat;
+                font-size: 4rem;
+            }
+
+            /* column 3 */
+            .col-3 {
+                position: absolute;
+                top: 70px;
+                left: 1360px;
+            }
+
+            .col-3 p {
+                color: gold;
+                font-size: 2.3rem;
+                line-height: 3.3vh;
+            }
+
+            .col-3 h1 {
+                color: wheat;
+                font-size: 4rem;
+            }
+
+
+        }
